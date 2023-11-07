@@ -11,7 +11,10 @@
 
   <ItemGroup>
     <Folder Include="Repositories\" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
+<<<<<<< HEAD
   
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
@@ -19,3 +22,6 @@
   </ItemGroup>
 
 </Project>
+=======
+</Project>
+>>>>>>> 374d7c39bc09be47b5f6e06933d30529e8cf9ef6
