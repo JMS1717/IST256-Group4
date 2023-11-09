@@ -23,8 +23,8 @@ namespace FinalProject.DAL.Repositories
 
 		public IEnumerable<Category> GetAllCategories()
 		{
-			string url = settings.categoryUrl;
-			var httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, new Uri(url))
+			string uri = settings.categoryUrl;
+			var httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, new Uri(uri))
 			{
 				Headers =
 				{

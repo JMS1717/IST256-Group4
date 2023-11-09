@@ -2,6 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FinalProject.Web.ViewModels
 {
+	/// <summary>
+	/// View Model for the Category View
+	/// </summary>
 	public class CategoryViewModel
 	{
 		private string[] statuses = { "Error", "Success", "SomeOther Status" };
