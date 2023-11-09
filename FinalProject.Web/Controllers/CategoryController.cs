@@ -1,4 +1,4 @@
-﻿using FinalProject.DAL.Repositories;
+using FinalProject.DAL.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
