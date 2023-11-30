@@ -39,6 +39,10 @@ namespace FinalProject.Web.Controllers
 			return View(model);
 		}
 
+		List<string> prankDescriptions = new(){
+			""
+		}
+
 		// GET: CategoryController/Details/5
 		public ActionResult Details(int id)
 		{
