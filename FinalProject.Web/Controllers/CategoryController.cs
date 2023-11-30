@@ -20,7 +20,21 @@ namespace FinalProject.Web.Controllers
 		{
 			var allCategories = advRepo.GetAllCategories();
 
-			var model = allCategories.Where(x => x.CategoryName.Contains("e"));
+			var model = allCategories.Where(x => x.CategoryName.Contains("e")).ToList();
+
+
+			List<string> pranks = new()
+			{
+				"prank1",
+				"prank1",
+				"prank1",
+				"prank1",
+				"prank1",
+				"prank1",
+				"prank1"
+
+			};
+			ViewBag.Pranks = pranks;
 
 			return View(model);
 		}

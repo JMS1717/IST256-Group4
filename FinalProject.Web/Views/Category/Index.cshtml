@@ -1,4 +1,4 @@
-@model IEnumerable<FinalProject.DAL.Models.Category>
+@model List<FinalProject.DAL.Models.Category>
 
 @{
 	ViewData["Title"] = "Index";
@@ -15,13 +15,14 @@
 </div>
 
 <div class="row">
-	@foreach (var item in Model)
+	@for (int i=0; i< 7; i++)
 	{
+		var item = Model[i];
 		<div class="card m-1" style="width: 18rem;padding:0">
-			<img src="https://placehold.co/50x50" alt="placeholder image" />
+			<img src="@item.Image" alt="@item.CategoryName" />
 			<div class="card-body">
 				<h5 class="card-title">@item.CategoryName</h5>
-				<p class="card-text">@item.Description.</p>
+				<p class="card-text">@item.Description. @ViewBag.Pranks[i]</p>
 			</div>
 			<div class="card-footer btn-group">
 				<a href="#" class="btn btn-primary">
