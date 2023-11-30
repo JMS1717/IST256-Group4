@@ -33,7 +33,7 @@ namespace FinalProject.Web.Controllers
 		/// <param name="logger">Logger to log errors and such</param>
 		public HomeController(IMailService mailService, 
 			IConfiguration config, 
-			ILogger<HomeController> logger, AdventureWorkRepository repo)
+			ILogger<HomeController> logger, AdventureWorksRepository repo)
 		{
 			this.mailService = mailService;
 			this.logger = logger;
@@ -48,8 +48,8 @@ namespace FinalProject.Web.Controllers
 		[HttpGet]
 		public IActionResult Index()
 		{
-			var model = repo.GetCategories();
-			return View();
+			var model = repo.GetAllCategories();
+			return View(model);
 		}
 
 		/// <summary>
