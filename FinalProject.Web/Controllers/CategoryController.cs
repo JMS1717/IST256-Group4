@@ -25,13 +25,13 @@ namespace FinalProject.Web.Controllers
 
 			List<string> pranks = new()
 			{
-				"prank1",
-				"prank1",
-				"prank1",
-				"prank1",
-				"prank1",
-				"prank1",
-				"prank1"
+				"Mystery Mixer Switcheroo",
+				"Colorful Condiment Confusion",
+				"Sweet Disguised Delight",
+				"Cereal Box Suprise Swap",
+				"Mock Meat Masquerade",
+				"Healthy Snack Sneak",
+				"Faux Fish Fiesta"
 
 			};
 			ViewBag.Pranks = pranks;
