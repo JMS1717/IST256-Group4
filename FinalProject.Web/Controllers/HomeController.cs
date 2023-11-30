@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Web;
+using FinalProject.DAL.Repositories;
 
 using FinalProject.Web.ViewModels;
 using FinalProject.Web.Services;
@@ -18,6 +19,8 @@ namespace FinalProject.Web.Controllers
 	/// </summary>
 	public class HomeController : Controller
 	{
+		private readonly AdventureWorksRepository repo;
+
 		private readonly ILogger<HomeController> logger;
 		private readonly IMailService mailService;
 		private readonly IConfiguration config;
@@ -30,11 +33,12 @@ namespace FinalProject.Web.Controllers
 		/// <param name="logger">Logger to log errors and such</param>
 		public HomeController(IMailService mailService, 
 			IConfiguration config, 
-			ILogger<HomeController> logger)
+			ILogger<HomeController> logger, AdventureWorkRepository repo)
 		{
 			this.mailService = mailService;
 			this.logger = logger;
 			this.config = config;
+			this.repo = repo;
 		}
 
 		/// <summary>
@@ -44,7 +48,7 @@ namespace FinalProject.Web.Controllers
 		[HttpGet]
 		public IActionResult Index()
 		{
-			
+			var model = repo.GetCategories();
 			return View();
 		}
 
