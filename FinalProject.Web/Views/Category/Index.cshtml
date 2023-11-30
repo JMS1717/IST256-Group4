@@ -19,7 +19,7 @@
 	{
 		var item = Model[i];
 		<div class="card m-1" style="width: 18rem;padding:0">
-			<img src="@item.Image" alt="@item.CategoryName" />
+			<img src="@item.Image" alt="@ViewBag.prankAltTag[i]" />
 			<div class="card-body">
 				<h5 class="card-title">@ViewBag.Pranks[i]</h5>
 				<p class="card-text">@ViewBag.prankDescriptions[i]</p>

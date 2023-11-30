@@ -48,6 +48,17 @@ namespace FinalProject.Web.Controllers
 			};
 			ViewBag.prankDescriptions = prankDescriptions;
 
+			List<string> prankAltTag = new(){
+				"Mismatched soft drink bottles at a party.", 
+				"Condiment bottles with unexpectedly colored contents.", 
+				"Desserts disguised as savory foods.", 
+				"Different cereals in mismatched boxes.", 
+				"Vegetarian dishes at a barbecue.", 
+				"Healthy snacks in a snack bowl.", 
+				"Fruit and vegetable sushi that looks like traditional seafood sushi."
+			};
+			ViewBag.prankAltTag = prankAltTag;
+
 			return View(model);
 		}
 
