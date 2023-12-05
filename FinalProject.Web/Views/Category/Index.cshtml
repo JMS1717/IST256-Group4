@@ -22,7 +22,8 @@
 				<p class="card-text">@ViewBag.prankDescriptions[i]</p>
 			</div>
 			<div class="card-footer btn-group">
-				<a href="confirm.html" class="btn btn-primary">
+			
+				<a asp-action="OrderConfirm" asp-controller="Home" asp-route-id="@item.CategoryId" class="btn btn-primary">
 					Order
 				</a>
 

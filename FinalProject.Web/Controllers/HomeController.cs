@@ -11,6 +11,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using System.Text;
 using System.Linq;
+using FinalProject.DAL.Models;
 
 namespace FinalProject.Web.Controllers
 {
@@ -60,7 +61,12 @@ namespace FinalProject.Web.Controllers
 		{
 			return View();
 		}
+public IActionResult OrderConfirm(int id)
+{
+	var model = repo.GetAllCategories().FirstOrDefault(x => x.CategoryId == id) ?? new Category() {CategoryName = "Not Found"};
 
+	return View(model);
+}
 		/// <summary>
 		/// Error page to show to the user
 		/// </summary>
