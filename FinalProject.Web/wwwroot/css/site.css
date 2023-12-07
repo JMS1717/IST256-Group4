@@ -23,3 +23,27 @@
 {
     font-size:.75em;
 }
+
+body
+{
+	background-color: #E6EFFF;
+}
+
+.brand-heading
+{
+	font-family: 'Arial', sans-serif;
+	font-size: 2.5rem;
+}
+
+.lead
+{
+	font-size: 1.25rem;
+}
+
+.custom-card
+{
+	background: #ffffff;
+	border: none;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}

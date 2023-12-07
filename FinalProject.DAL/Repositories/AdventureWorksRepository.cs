@@ -48,8 +48,5 @@ namespace FinalProject.DAL.Repositories
 			return data;
 
 		}
-
-
-
 	}
 }

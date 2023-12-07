@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace FinalProject.DAL.Models
 {
 	public class Category
@@ -11,5 +5,12 @@ namespace FinalProject.DAL.Models
 		public int CategoryId { get; set; }
 		public string CategoryName { get; set; }
 		public string Description { get; set; }
+		public string Image
+		{
+			get
+			{
+				return $"/images/{CategoryName.Replace(" ", "").Replace("/", "")}.jpg";
+			}
+		}
 	}
 }
